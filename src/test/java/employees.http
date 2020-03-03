@@ -1,0 +1,28 @@
+GET http://localhost:8080/api/employees/?prefix=John
+
+###
+GET http://localhost:8080/api/employees/1
+
+###
+
+GET http://localhost:8080/api/employees/
+
+### Új alkalmazott létrehozása
+
+POST http://localhost:8080/api/employees
+Content-Type: application/json
+
+{"name": "John Smith222"}
+
+### Alkalmazott módosítása
+
+POST http://localhost:8080/api/employees/1
+Content-Type: application/json
+
+{"name": "John Doe2"}
+
+###
+
+DELETE http://localhost:8080/api/employees/123
+
+###
