@@ -2,13 +2,36 @@ package training.employees;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import javax.persistence.*;
+/*
 @Data
 @AllArgsConstructor
 public class Employee {
 
     public Long id;
     public String name;
+
+    public Employee(String name) {
+        this.name = name;
+    }
+}
+*/
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "employees")
+public class Employee {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+
+    @Column(name = "emp_name")
+    private String name;
 
     public Employee(String name) {
         this.name = name;
